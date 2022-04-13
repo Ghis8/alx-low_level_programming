@@ -1,4 +1,4 @@
-#include<main.h>
+#include"main.h"
 /**
  * main - Prints Holberton
  *
@@ -8,5 +8,6 @@ int main(void)
 {
 	_putchar("_putchar");
 	_putchar('\n');
+
 	return (0);
 }
