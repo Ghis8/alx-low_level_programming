@@ -1,5 +1,3 @@
-
-  
 #include "main.h"
 
 /**
@@ -8,8 +6,6 @@
  *
  * Return: void
  */
-
-
 void print_triangle(int size)
 {
 	int i, j;
@@ -27,5 +23,4 @@ void print_triangle(int size)
 		}
 		_putchar('\n');
 	}
-
 }
