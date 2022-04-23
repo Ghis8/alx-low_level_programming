@@ -1,5 +1,4 @@
 #include "main.h"
-#include "holberton.h"
 
 /**
  * strcat - Concatenates the string pointed to by @src, including the terminating
@@ -20,4 +19,5 @@ char *strcat(char *dest, const char *src)
 		dest[dest_len++] = src[index];
 
 	return (dest);
+	_putchar('\0');
 }
