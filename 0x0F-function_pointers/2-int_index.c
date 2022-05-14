@@ -1,26 +1,35 @@
+#include <stdlib.h>
 #include "function_pointers.h"
-
+#include <stdbool.h>
 /**
- * int_index - searches for an integer
- * @array: array to serch through
- * @size: size of array
- * @cmp: function used to compare
+ *int_index-Searches for an integer.
+ *@array:the array to search from.
+ *@size:Size of the array.
+ *@cmp:Pointer to the fxn that checks for an int.
  *
- * Return: first index for which cmp doesn't return 0, or -1
+ *Return:index of the found index.
  */
+
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	int i, r;
+	int j;
+	bool k;
 
-	if (size > 0 && array && cmp)
+	if (array != NULL && size > 0 && cmp != NULL)
 	{
-		for (i = 0; i < size; i++)
-		{
-			r = cmp(array[i]);
-			if (r)
-				break;
-		}
-		if (i < size)
-			return (i);
+	if (size <= 0)
+	{
+		return (0);
 	}
+
+	for (j = 0; j < size; j++)
+	{
+		k = cmp(array[j]);
+		if (k == true)
+		{
+			return (j);
+		}
+	}
+	}
+	return (-1);
 }
